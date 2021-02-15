@@ -1,0 +1,167 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/mixins';
+$_size-15: 15px;
+$_color-bold: #050504;
+$_size-none: 0;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: $main-font;
+    font-size: $size-14;
+    grid-row-start: 2;
+
+    @media (max-width: $breakpoint-tablet) {
+        order: 4;
+    }
+}
+
+.react-date-picker {
+    &__wrapper {
+        align-items: center;
+        background: $color-white;
+        border: 1px solid $color-ghost;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        height: 45px;
+        position: relative;
+
+        &:hover {
+            border-color: $color-fiord;
+        }
+    }
+
+    &__inputGroup {
+        line-height: 3.2;
+        padding-left: 16px;
+
+        &__input:invalid {
+            background: none;
+        }
+    }
+
+    &__calendar-button {
+        line-height: 3.2;
+        margin-right: 10px;
+    }
+
+    // Calendar popup placement
+    &__calendar {
+        &--open {
+            bottom: unset !important;
+            margin-top: 5px;
+            top: 100% !important;
+        }
+    }
+}
+
+.react-calendar {
+    background: $color-porcelain;
+    border: 1px solid $color-ghost;
+    border-radius: 5px;
+    padding: 15px 30px;
+    width: 284px;
+
+    &__navigation {
+        height: 20px;
+
+        &__arrow {
+            @include flex-center;
+            border-radius: 5px;
+        }
+
+        &__prev2-button,
+        &__next2-button {
+            display: none;
+        }
+
+        &__next-button {
+            transform: rotate(180deg);
+        }
+
+        &__label {
+            border-radius: 5px;
+            font-family: $main-font;
+            font-size: $_size-15;
+            font-weight: $weight-medium;
+        }
+    }
+
+    &__month-view {
+        font-family: $main-font;
+
+        &__weekdays {
+            color: $color-fiord;
+            font-size: $size-12;
+            font-weight: $weight-medium;
+            margin-bottom: 10px;
+            text-transform: none;
+
+            abbr {
+                text-decoration: none;
+            }
+        }
+
+        &__days {
+            &__day {
+                border-radius: 50%;
+                color: $color-fiord;
+            }
+
+            &__day--weekend {
+                color: $_color-bold;
+            }
+
+            &__day--neighboringMonth {
+                color: $color-grey-chateau;
+            }
+        }
+    }
+
+    &__tile {
+        background: $color-porcelain;
+        font-family: $main-font;
+        font-size: $size-12;
+        font-weight: $weight-regular;
+        height: 32px;
+        width: 32px;
+
+        // On hover design
+        &:enabled {
+            &:hover,
+            &:focus {
+                background: $color-iron;
+            }
+        }
+
+        // Choosen day design
+        &--active {
+            background: $color-fiord;
+            color: $color-white;
+
+            &:enabled:hover,
+            &:enabled:focus {
+                background: lighten($color-fiord, 10%);
+            }
+        }
+    }
+
+    &__decade-view {
+        &__years {
+            &__year {
+                @include flex-center;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &__year-view {
+        &__months {
+            &__month {
+                @include flex-center;
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../../styles/base/base';
+
+.post {
+    &__image {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.1s linear;
+        width: 100%;
+    }
+
+    &__image-wrapper {
+        height: 405px;
+        overflow: hidden;
+        position: relative;
+
+        &:hover .svg__play {
+            fill: $color-white;
+            stroke: $color-white;
+        }
+
+        &:hover .svg__background {
+            fill: $color-purple-dark;
+        }
+
+        &:hover .post__image {
+            overflow: hidden;
+            transform: scale(1.1);
+        }
+    }
+
+    &__video-play-button {
+        background: $transparent;
+        border: hidden;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text-wrapper {
+        padding: 20px 15px;
+    }
+
+    &__text {
+        color: $color-midnight;
+        font-size: $size-16;
+        line-height: 1.5;
+    }
+}

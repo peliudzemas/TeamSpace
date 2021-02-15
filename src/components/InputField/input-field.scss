@@ -1,0 +1,50 @@
+@import '../../styles/base/base';
+
+::placeholder {
+    color: $color-grey-4;
+}
+
+.input-wrap__field {
+    border: 1px solid $color-grey-4;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 48px;
+    margin-top: 8px;
+    outline-color: $color-blue-dark;
+    padding: 12px 16px;
+    width: 100%;
+
+    &--error {
+        border: 1px solid $color-red;
+    }
+}
+
+.input-wrap {
+    margin-top: 33px;
+}
+
+@media (max-height: 48.125em) {
+    .input-wrap {
+        margin-top: 20px;
+    }
+}
+
+.input-passwords,
+.input-names {
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.input-error-cross {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        margin-top: 8px;
+    }
+
+    svg {
+        transform: translate(-20px, -29px);
+    }
+}

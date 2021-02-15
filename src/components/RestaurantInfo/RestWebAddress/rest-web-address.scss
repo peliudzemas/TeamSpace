@@ -1,0 +1,26 @@
+@import '../../../styles/base/base';
+
+.restaurant-contact {
+    align-items: center;
+    color: $color-fiord;
+    display: flex;
+
+    &__text {
+        font-size: $size-12;
+        font-weight: $weight-medium;
+        line-height: 1.1;
+        margin: 6px 0;
+        padding-left: 10px;
+        text-transform: uppercase;
+
+        &--link {
+            color: $color-fiord;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-regent-gray;
+            }
+        }
+    }
+}

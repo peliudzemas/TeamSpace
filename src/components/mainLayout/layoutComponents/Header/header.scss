@@ -1,0 +1,23 @@
+@import '../../../../styles/base/base';
+@import '../../../../styles/base/colors';
+
+.header {
+    align-items: center;
+    background-color: $color-white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: $z-index-higher + 1;
+
+    &__profile-widget {
+        margin: 0 40px 0 0;
+    }
+
+    &__notification {
+        margin: 38px 30px 34px 0;
+    }
+}

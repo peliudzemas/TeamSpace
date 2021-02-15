@@ -1,0 +1,14 @@
+@import '../../styles/base/base';
+
+.heart-button {
+    background: $transparent;
+    border: hidden;
+    cursor: pointer;
+    height: 24px;
+    padding: 0;
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

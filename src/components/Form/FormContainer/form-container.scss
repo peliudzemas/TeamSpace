@@ -1,0 +1,46 @@
+@import '../../../styles/base/base';
+
+.form-container {
+    background-color: $color-white;
+    border-radius: 8px;
+    color: $color-fiord;
+    font-weight: 400;
+    margin-top: 69px;
+    padding: 42px 32px;
+    text-align: left;
+    width: 544px;
+
+    &__legend {
+        font-weight: 900;
+        margin: 0;
+    }
+
+    &__sublegend {
+        margin: 0;
+        padding-top: 8px;
+    }
+
+    &__footer {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+    }
+
+    &__footer-text {
+        font-size: $size-16;
+    }
+
+    &__sign-link {
+        color: $color-electric-violet;
+        padding-left: 3px;
+        text-decoration: none;
+    }
+}
+
+@media (max-height: 48.125em) {
+    .form-container {
+        margin-top: 30px;
+        padding: 22px 32px;
+    }
+}

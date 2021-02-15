@@ -1,0 +1,17 @@
+.input-label {
+    color: $color-grey-chateau;
+    font-family: $main-font;
+    font-size: $size-14;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--disabled {
+        color: $color-grey-3;
+    }
+}
+
+.label-red {
+    color: $color-red;
+    font-size: $size-10;
+    text-transform: uppercase;
+}

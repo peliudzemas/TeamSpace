@@ -1,0 +1,28 @@
+@import '../../styles/base/base';
+
+.list-section {
+    transform: translateY(-44px);
+
+    &__results {
+        align-items: center;
+        display: flex;
+        font-size: $size-20;
+        font-weight: $weight-medium;
+        line-height: 1.2;
+        margin: 0 0 20px;
+    }
+
+    &__result-text {
+        flex-shrink: 0;
+    }
+
+    &__search-results {
+        flex-shrink: 0;
+        font-style: italic;
+        margin: 0 0 0 15px;
+    }
+
+    &__filter-item {
+        margin: 0 0 0 15px;
+    }
+}

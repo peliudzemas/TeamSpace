@@ -1,0 +1,309 @@
+@import '../../../../../styles/base/base';
+
+$transparent: transparent;
+
+.navigation__wrapper {
+    height: 100%;
+    position: relative;
+    transition: width 0.1s linear;
+
+    &--short {
+        width: 96px;
+    }
+
+    &--long {
+        width: 206px;
+    }
+}
+
+.navigation {
+    overflow: hidden;
+
+    ul {
+        list-style-type: none;
+        margin-top: 70px;
+        padding-inline-start: 20px;
+    }
+
+    &__chevron {
+        height: 9px;
+        left: 50%;
+        position: absolute;
+        stroke: $color-grey-1;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s;
+        width: 5px;
+
+        &--background {
+            background-color: $color-grey-7;
+            border: 2px solid $color-grey-1;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 26px;
+            margin-top: 24px;
+            outline: none;
+            position: absolute;
+            right: -12px;
+            width: 26px;
+        }
+
+        &--left {
+            transform: rotateY(-180deg) translate(50%, -50%);
+            transition: transform 0.1s;
+        }
+    }
+
+    &__logo {
+        margin: 24px;
+    }
+
+    &__item {
+        height: 90px;
+        position: relative;
+        transition: background-position 0.1s linear, background-size 0.1s linear;
+        width: 100%;
+
+        &--short {
+            background: radial-gradient(
+                        100% 31% at top left,
+                        transparent 94%,
+                        transparent 100%
+                    )
+                    top 0 right 0/0px 45px,
+                linear-gradient(0deg, transparent 70%, transparent 70%) top 0
+                    right 0/0px 45px,
+                radial-gradient(
+                        100% 70% at bottom right,
+                        transparent 97%,
+                        transparent 100%
+                    )
+                    top 0 right 0/0px 45px,
+                radial-gradient(
+                        100% 30% at bottom left,
+                        transparent 97%,
+                        transparent 100%
+                    )
+                    top 44px right 0/0px 45px,
+                linear-gradient(0deg, transparent 30%, transparent 30%) top 44px
+                    right 0/0px 45px,
+                radial-gradient(
+                        100% 70% at top right,
+                        transparent 97%,
+                        transparent 100%
+                    )
+                    top 45px right 0/0px 45px;
+            background-repeat: no-repeat;
+        }
+
+        &--long {
+            background: radial-gradient(
+                        100% 31% at top left,
+                        transparent 94%,
+                        transparent 100%
+                    )
+                    top 0 right 0/0px 45px,
+                linear-gradient(0deg, transparent 70%, transparent 70%) top 0
+                    right 0/0px 45px,
+                radial-gradient(
+                        100% 70% at bottom right,
+                        transparent 97%,
+                        transparent 100%
+                    )
+                    top 0 right 0/0px 45px,
+                radial-gradient(
+                        100% 30% at bottom left,
+                        transparent 97%,
+                        transparent 100%
+                    )
+                    top 44px right 0/0px 45px,
+                linear-gradient(0deg, transparent 30%, transparent 30%) top 44px
+                    right 0/0px 45px,
+                radial-gradient(
+                        100% 70% at top right,
+                        transparent 97%,
+                        transparent 100%
+                    )
+                    top 44px right 0/0px 45px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .selected &__item {
+        &--short {
+            background: radial-gradient(
+                        100% 31% at top left,
+                        transparent 94%,
+                        $color-grey-1 100%
+                    )
+                    top 0 right 0/18px 45px,
+                linear-gradient(0deg, $color-grey-1 70%, transparent 70%) top 0
+                    right 17px/29px 45px,
+                radial-gradient(
+                        100% 70% at bottom right,
+                        $color-grey-1 99%,
+                        transparent 100%
+                    )
+                    top 0 right 45px/29px 45px,
+                radial-gradient(
+                        100% 30% at bottom left,
+                        transparent 99%,
+                        $color-grey-1 100%
+                    )
+                    top 44px right 0/18px 45px,
+                linear-gradient(0deg, transparent 30%, $color-grey-1 30%) top
+                    44px right 17px/29px 45px,
+                radial-gradient(
+                        100% 70% at top right,
+                        $color-grey-1 99%,
+                        transparent 100%
+                    )
+                    top 44px right 45px/29px 45px;
+            background-repeat: no-repeat;
+        }
+
+        &--long {
+            background: radial-gradient(
+                        100% 31% at top left,
+                        transparent 94%,
+                        $color-grey-1 100%
+                    )
+                    top 0 right 0/18px 45px,
+                linear-gradient(0deg, $color-grey-1 70%, transparent 70%) top 0
+                    right 17px/139px 45px,
+                radial-gradient(
+                        100% 70% at bottom right,
+                        $color-grey-1 98%,
+                        transparent 100%
+                    )
+                    top 0 right 154px/29px 45px,
+                radial-gradient(
+                        100% 30% at bottom left,
+                        transparent 99%,
+                        $color-grey-1 100%
+                    )
+                    top 44px right 0/18px 45px,
+                linear-gradient(0deg, transparent 30%, $color-grey-1 30%) top
+                    44px right 17px/139px 45px,
+                radial-gradient(
+                        100% 70% at top right,
+                        $color-grey-1 99%,
+                        transparent 100%
+                    )
+                    top 44px right 154px/29px 45px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__context {
+        padding-left: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+    }
+
+    &__icon {
+        height: 24px;
+        stroke: $color-grey-1;
+        vertical-align: middle;
+        width: 24px;
+    }
+
+    .selected &__icon {
+        stroke: $color-grey-7;
+    }
+
+    &__text {
+        color: $color-grey-1;
+        font-weight: $weight-medium;
+        padding-left: 20px;
+        vertical-align: middle;
+    }
+
+    .selected &__text {
+        color: $color-grey-7;
+    }
+
+    &__item-background {
+        fill: $transparent;
+    }
+
+    .selected &__item-background {
+        fill: $color-grey-1;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        a:not(.selected) &__item--short:hover {
+            background: radial-gradient(
+                        100% 31% at top left,
+                        transparent 94%,
+                        $color-hover-purple 100%
+                    )
+                    top 0 right 0/18px 45px,
+                linear-gradient(0deg, $color-hover-purple 70%, transparent 70%)
+                    top 0 right 17px/29px 45px,
+                radial-gradient(
+                        100% 70% at bottom right,
+                        $color-hover-purple 98%,
+                        transparent 100%
+                    )
+                    top 0 right 45px/29px 45px,
+                radial-gradient(
+                        100% 30% at bottom left,
+                        transparent 98%,
+                        $color-hover-purple 100%
+                    )
+                    top 44px right 0/18px 45px,
+                linear-gradient(0deg, transparent 30%, $color-hover-purple 30%)
+                    top 44px right 17px/29px 45px,
+                radial-gradient(
+                        100% 70% at top right,
+                        $color-hover-purple 98%,
+                        transparent 100%
+                    )
+                    top 44px right 45px/29px 45px;
+            background-repeat: no-repeat;
+        }
+
+        a:not(.selected) &__item--long:hover {
+            background: radial-gradient(
+                        100% 31% at top left,
+                        transparent 94%,
+                        $color-hover-purple 100%
+                    )
+                    top 0 right 0/18px 45px,
+                linear-gradient(0deg, $color-hover-purple 70%, transparent 70%)
+                    top 0 right 17px/139px 45px,
+                radial-gradient(
+                        100% 70% at bottom right,
+                        $color-hover-purple 98%,
+                        transparent 100%
+                    )
+                    top 0 right 154px/29px 45px,
+                radial-gradient(
+                        100% 30% at bottom left,
+                        transparent 97%,
+                        $color-hover-purple 100%
+                    )
+                    top 44px right 0/18px 45px,
+                linear-gradient(0deg, transparent 30%, $color-hover-purple 30%)
+                    top 44px right 17px/139px 45px,
+                radial-gradient(
+                        100% 70% at top right,
+                        $color-hover-purple 98%,
+                        transparent 100%
+                    )
+                    top 44px right 154px/29px 45px;
+            background-repeat: no-repeat;
+        }
+
+        a:not(.selected) &__item--long:hover &__icon {
+            stroke: $color-grey-1;
+        }
+
+        a:not(.selected) &__item--long:hover &__text {
+            color: $color-grey-1;
+        }
+    }
+}

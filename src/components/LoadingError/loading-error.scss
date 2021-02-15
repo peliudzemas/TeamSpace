@@ -1,0 +1,26 @@
+@import '../../styles/base/base';
+
+.error-block {
+    align-items: center;
+    background-color: $color-red;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 20px;
+    padding: 16px;
+    width: fit-content;
+
+    &__message {
+        color: $color-white;
+        font-size: $size-14;
+        font-weight: bold;
+        padding: 0 10px;
+    }
+
+    svg {
+        path {
+            stroke: $color-white;
+            stroke-width: 2;
+        }
+    }
+}

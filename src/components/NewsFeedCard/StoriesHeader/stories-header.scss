@@ -1,0 +1,33 @@
+@import '../../../styles/base/base';
+
+.post {
+    &__header {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: $size-12;
+    }
+
+    &__avatar-wrapper {
+        margin: 10px 5px 10px 15px;
+    }
+
+    &__username {
+        color: $color-blue-dark;
+        flex: 1;
+        font-weight: $weight-medium;
+        margin: 10px 5px;
+        text-transform: uppercase;
+    }
+
+    &__location {
+        color: $color-grey-6;
+        font-weight: $weight-medium;
+        margin: 10px 5px;
+    }
+
+    &__date {
+        color: $color-grey-6;
+        margin: 10px 15px 10px 5px;
+    }
+}

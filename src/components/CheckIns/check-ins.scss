@@ -1,0 +1,20 @@
+@import '../../styles/base/base';
+
+@mixin ratingbox($background, $element, $width) {
+    align-items: center;
+    background-color: $background;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: $element;
+    display: flex;
+    font-size: $size-14;
+    font-weight: 700;
+    height: 32px;
+    justify-content: space-between;
+    padding: 8px 12px;
+    width: $width;
+}
+
+.users {
+    @include ratingbox($color-pickled-bluewood, $color-yellow, 53px);
+}

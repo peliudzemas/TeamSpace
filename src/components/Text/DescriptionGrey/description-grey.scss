@@ -1,0 +1,12 @@
+@import '../../../styles/base/base';
+
+.description-grey {
+    &__content {
+        color: $color-grey-6;
+        font-size: $size-16;
+    }
+
+    &__wrapper {
+        line-height: 24px;
+    }
+}

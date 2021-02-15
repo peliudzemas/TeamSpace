@@ -1,0 +1,48 @@
+@import '../../styles/base/base';
+
+.svg {
+    &__arrow-icon {
+        height: 7px;
+        padding: 0 10px;
+        stroke: $color-grey-chateau;
+        vertical-align: middle;
+        width: 4px;
+    }
+}
+
+.breadcrumb {
+    font-family: $main-font;
+    font-size: $size-12;
+    font-weight: 500;
+    max-width: 100%;
+    position: relative;
+    z-index: $z-index-higher;
+
+    &__list {
+        margin-top: 35px;
+        padding: 0;
+    }
+
+    &__link {
+        color: $color-grey-chateau;
+        text-decoration: none;
+
+        &:last-child {
+            color: $color-grey-7;
+            cursor: default;
+        }
+
+        &:first-child .svg__arrow-icon {
+            display: none;
+        }
+
+        &:not(:last-child):hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__list-item {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../../styles/base//base';
+
+.best-restaurants {
+    background-color: $color-porcelain;
+    column-gap: $column-gap-small;
+    display: grid;
+    grid-template-areas: 'general restaurant restaurant';
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    padding: 64px 0;
+
+    .restaurant-intro-card__wrapper {
+        grid-area: general;
+    }
+
+    .restaurant-card__wrapper {
+        column-gap: $column-gap-small;
+        display: grid;
+        grid-area: restaurant;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+        column-gap: 0;
+        grid-template-areas:
+            'general'
+            'restaurant';
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+
+        .restaurant-card__wrapper {
+            column-gap: $column-gap-extra-small;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+}

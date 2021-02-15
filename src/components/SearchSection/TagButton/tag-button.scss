@@ -1,0 +1,36 @@
+@import '../../../styles/base/base';
+
+.tag-button {
+    $this: &;
+
+    align-items: center;
+    background: $color-white;
+    border: 1px solid $color-ghost;
+    border-radius: 8px;
+    color: $color-fiord;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: $main-font;
+    font-size: $size-12;
+    font-weight: $weight-medium;
+    margin-right: 12px;
+    padding: 5px 10px;
+    transition: 0.5s ease;
+
+    &--selected {
+        background: $color-fiord;
+        color: $color-white;
+
+        #{$this}__icon path {
+            stroke: $color-white;
+        }
+    }
+
+    &__icon {
+        margin-right: 8px;
+    }
+
+    &:hover {
+        background: $color-ghost;
+    }
+}

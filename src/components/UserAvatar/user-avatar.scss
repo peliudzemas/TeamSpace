@@ -1,0 +1,14 @@
+@import '../../styles/base/base';
+
+.user-avatar {
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+
+    &__image {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}

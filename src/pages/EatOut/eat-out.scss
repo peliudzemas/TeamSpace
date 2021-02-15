@@ -1,0 +1,30 @@
+@import '../../styles/base/base';
+
+.eat-out {
+    margin: 0 auto;
+    max-width: 1265px;
+
+    &__title {
+        color: $color-pickled-bluewood;
+        font-size: $size-36;
+        font-weight: 700;
+        line-height: 42px;
+        margin: 0 0 30px;
+    }
+
+    &__heading {
+        color: $color-blue-dark;
+        font-size: $size-24;
+        font-weight: $weight-medium;
+        letter-spacing: 0.5px;
+        margin-top: 64px;
+    }
+
+    &__categories-section {
+        margin-top: 60px;
+    }
+
+    &__new-restaurants {
+        margin-bottom: 64px;
+    }
+}

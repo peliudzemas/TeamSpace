@@ -1,0 +1,44 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.review {
+    margin: 20px 0;
+
+    &__wrapper {
+        padding: 20px 15px;
+        position: relative;
+    }
+
+    &__username,
+    &__text {
+        color: $color-midnight;
+        font-size: $size-14;
+    }
+
+    &__username {
+        font-weight: $weight-bold;
+        padding-bottom: 10px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__rating {
+        @include flex-center;
+        background-color: $color-yellow;
+        border-radius: 0 8px;
+        padding: 5px 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 45px;
+    }
+
+    &__rating-number {
+        color: $color-pickled-bluewood;
+        font-size: $size-14;
+        font-weight: $weight-bold;
+        padding: 0 5px;
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/base/base';
+
+.information-section {
+    padding: 25px 0 0 25px;
+
+    &__column {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    &__column-child {
+        margin: 0 0 25px;
+    }
+}

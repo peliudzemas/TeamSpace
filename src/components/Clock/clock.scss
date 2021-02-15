@@ -1,0 +1,21 @@
+@import '../../styles/base/base';
+$_size-large: 100px;
+$_size-medium: 80px;
+$_size-small: 40px;
+
+.clock-wrapper {
+    color: $color-pickled-bluewood;
+    font-family: $main-font;
+    font-size: $_size-large;
+    font-weight: bold;
+    line-height: normal;
+    white-space: nowrap;
+
+    @media (max-width: $breakpoint-laptop) {
+        font-size: $_size-medium;
+    }
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+        font-size: $_size-small;
+    }
+}

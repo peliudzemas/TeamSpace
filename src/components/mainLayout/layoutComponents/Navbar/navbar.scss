@@ -1,0 +1,22 @@
+@import '../../../../styles/base/base';
+@import '../../../../styles/base/colors';
+
+.navbar {
+    background: $color-purple-dark;
+    grid-area: n;
+    height: 100%;
+    transition: width 0.1s linear;
+    z-index: $z-index-timeline;
+
+    &--short {
+        width: 96px;
+    }
+
+    &--long {
+        width: 206px;
+    }
+
+    &__fixed-position-wrapper {
+        position: fixed;
+    }
+}

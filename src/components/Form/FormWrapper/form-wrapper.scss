@@ -1,0 +1,25 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/mixins';
+
+.form-wrapper {
+    @include flex-center;
+    background-color: $color-mercury;
+    height: 100vh;
+    width: 100vw;
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        @include flex-center;
+        flex-direction: column;
+    }
+}
+
+@media (max-height: 48.125em) {
+    .form-wrapper {
+        overflow: auto;
+    }
+}

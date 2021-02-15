@@ -1,0 +1,70 @@
+@import '../../styles/base/base';
+@import '../../styles/base/colors';
+
+html,
+body,
+body > div,
+.app {
+    font-family: $main-font;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.layout__wrapper {
+    display: grid;
+    grid-template-areas:
+        'n h'
+        'n c'
+        'n f';
+    grid-template-columns: 0.3fr 11.7fr;
+    grid-template-rows: 1fr 10.25fr 0.75fr;
+    height: 100%;
+
+    .header__wrapper {
+        grid-area: h;
+        height: 100px;
+    }
+
+    .content__wrapper {
+        background: $color-grey-1;
+        grid-area: c;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .footer__wrapper {
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+        grid-area: f;
+        z-index: $z-index-base;
+    }
+
+    @media (max-width: $breakpoint-laptop) {
+        grid-template-columns: 0.75fr 11.25fr;
+        grid-template-rows: 1fr 10.25fr 0.75fr;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+
+    &-track {
+        background: $color-iron;
+    }
+
+    &-thumb {
+        background: $color-purple-dark;
+        border-radius: 5px;
+
+        &:hover {
+            background: $color-hover-purple;
+        }
+
+        &:active {
+            background: $color-active-purple;
+        }
+    }
+}

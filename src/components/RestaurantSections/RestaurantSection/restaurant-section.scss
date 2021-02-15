@@ -1,0 +1,24 @@
+@import '../../../styles/base/base';
+
+.restaurant-section {
+    background-color: $color-porcelain;
+    column-gap: $column-gap-small;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    position: relative;
+    row-gap: $column-gap-small;
+
+    @media (max-width: 1240px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+        gap: $column-gap-extra-small;
+        row-gap: $column-gap-extra-small;
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+}

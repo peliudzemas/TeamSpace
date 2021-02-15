@@ -1,0 +1,102 @@
+@import '../../../styles/base/base';
+
+.birthday {
+    color: $color-blue-dark;
+    font-size: $size-12;
+    margin: 0 15px 15px;
+    padding-top: 65px;
+    position: relative;
+    text-align: center;
+
+    &__profile {
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 60%;
+    }
+
+    &__user {
+        font-weight: $weight-medium;
+        text-transform: uppercase;
+    }
+
+    &__wish {
+        font-weight: $weight-medium;
+    }
+
+    &__svg {
+        position: absolute;
+    }
+
+    &__confetti {
+        left: 5%;
+        top: 65%;
+        transform: translate(-25%, -50%);
+        width: 56px;
+    }
+
+    &__open-present {
+        right: 5%;
+        top: 60%;
+        transform: translate(25%, -50%);
+        width: 65px;
+    }
+
+    .date {
+        font-weight: $weight-medium;
+    }
+
+    p {
+        line-height: 18px;
+        margin: 0;
+    }
+}
+
+.svg-circle {
+    &--position-1 {
+        left: 7%;
+        top: 15%;
+    }
+
+    &--position-2 {
+        left: 25%;
+        top: 10%;
+    }
+
+    &--position-3 {
+        right: 33%;
+        top: 20%;
+    }
+
+    &--position-4 {
+        right: 15%;
+        top: 17%;
+    }
+}
+
+.svg-star {
+    &--position-1 {
+        left: 17%;
+        top: 25%;
+    }
+
+    &--position-2 {
+        left: 30%;
+        top: 30%;
+    }
+
+    &--position-3 {
+        right: 27%;
+        top: 12%;
+    }
+
+    &--position-4 {
+        right: 25%;
+        top: 35%;
+    }
+}

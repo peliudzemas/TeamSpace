@@ -1,0 +1,58 @@
+@import '../../styles/base/base';
+
+.button {
+    background-color: $color-purple-dark;
+    border: 0;
+    border-radius: 65px;
+    color: $color-white;
+    cursor: pointer;
+    font-family: $main-font;
+    height: 40px;
+    padding: 8px 24px;
+    text-transform: uppercase;
+    width: fit-content;
+
+    &--enabled {
+        &:hover,
+        &:focus {
+            background-color: $color-hover-purple;
+        }
+
+        &:active {
+            background-color: $color-active-purple;
+        }
+    }
+
+    &--disabled {
+        background-color: $color-grey-2;
+        color: $color-grey-chateau;
+        cursor: default;
+    }
+
+    &--slider {
+        background-color: $color-red;
+
+        &:hover,
+        &:focus {
+            background-color: $color-red-darker;
+        }
+
+        &:active {
+            background-color: $color-red-darkest;
+        }
+    }
+
+    &--text {
+        background-color: $transparent;
+        color: $color-slate-grey;
+
+        &:hover,
+        &:focus {
+            color: $color-fiord;
+        }
+
+        &:active {
+            color: $color-midnight;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../styles/base/base';
+
+.link {
+    background: none;
+    border: 0;
+    color: $color-link;
+    cursor: pointer;
+    font-size: $size-14;
+    font-weight: $weight-regular;
+    height: 40px;
+    line-height: 1.7;
+    margin: 0 8px;
+    padding: 8px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-link-hover;
+    }
+}

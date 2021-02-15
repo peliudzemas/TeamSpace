@@ -1,0 +1,22 @@
+@import '../../styles/base/base';
+
+$_size-large: 36px;
+$_size-medium: 26px;
+$_size-small: 16px;
+
+.greeting-wrapper {
+    color: $color-pickled-bluewood;
+    font-size: $_size-large;
+    font-weight: bold;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: $breakpoint-laptop) {
+        font-size: $_size-medium;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $_size-small;
+    }
+}

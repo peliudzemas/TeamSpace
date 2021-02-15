@@ -1,0 +1,65 @@
+@import '../../styles/base/base';
+
+.restaurants-carousel {
+    position: relative;
+    width: 100%;
+
+    &__buttons {
+        position: absolute;
+        right: 0;
+        transform: translateY(-50px);
+    }
+
+    &__button {
+        align-items: center;
+        background: $color-white;
+        border: 1px solid $color-grey-3;
+        border-radius: 5px 0 0 5px;
+        box-sizing: border-box;
+        display: inline-flex;
+        height: 25px;
+        justify-content: center;
+        width: 25px;
+
+        &:hover {
+            background: $color-grey-chateau;
+
+            .restaurants-carousel__button-arrow path {
+                fill: $color-white;
+                stroke: $color-grey-chateau;
+            }
+        }
+
+        &:focus {
+            background: $color-fiord;
+
+            .restaurants-carousel__button-arrow path {
+                fill: $color-white;
+                stroke: $color-fiord;
+            }
+        }
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__slider {
+        display: grid;
+        gap: $column-gap-small;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @media (max-width: 1240px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: $breakpoint-tablet-landscape) {
+            gap: $column-gap-extra-small;
+        }
+
+        @media (max-width: 900px) {
+            gap: 0;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@import '../../../styles/mixins/mixins';
+@import '../../../styles/base/base';
+
+.restaurant-card {
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 16px;
+
+    &__top {
+        height: 80%;
+        position: relative;
+
+        &--fixed {
+            height: 185px;
+        }
+
+        @media (max-width: $breakpoint-tablet-landscape) {
+            height: 185px;
+        }
+    }
+
+    &__checkins-rating {
+        @include flex-space-between;
+        padding: 16px 16px 0;
+        position: absolute;
+        width: calc(100% - 32px);
+        z-index: $z-index-higher;
+    }
+
+    &__categories {
+        bottom: 0;
+        padding: 0 16px;
+        position: absolute;
+        width: calc(100% - 32px);
+        z-index: $z-index-higher;
+    }
+
+    &__background {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+        &::after {
+            background-image: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                $color-white 100%
+            );
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    &__image {
+        border-radius: 8px 8px 0 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__title-like {
+        @include flex-space-between;
+        padding: 0 23px 0 16px;
+    }
+
+    &__link {
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    &__hours {
+        padding-left: 16px;
+    }
+}

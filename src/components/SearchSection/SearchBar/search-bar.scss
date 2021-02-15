@@ -1,0 +1,55 @@
+@import '../../../styles/base/base';
+
+::placeholder {
+    color: $color-ghost;
+}
+
+.search-bar {
+    align-items: center;
+    background: $color-white;
+    border: 1px solid $color-ghost;
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+    grid-row-start: 2;
+    padding: 0 16px;
+    position: relative;
+
+    &:focus-within {
+        border-color: $color-fiord;
+    }
+
+    &:hover {
+        border-color: $color-fiord;
+        color: $color-fiord;
+    }
+
+    &__button {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        height: 20px;
+        padding: 0;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__text-field {
+        border: 0;
+        font-family: $main-font;
+        font-size: $size-14;
+        font-weight: $weight-regular;
+        line-height: 3.1;
+        margin-left: 10px;
+        padding: 0;
+        width: 100%;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}

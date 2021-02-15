@@ -1,0 +1,20 @@
+@import '../../styles/base/base';
+
+.category-restaurants {
+    margin: 0 auto;
+    margin-bottom: 64px;
+    max-width: 1265px;
+
+    &__heading {
+        color: $color-pickled-bluewood;
+        font-size: $size-36;
+        font-weight: 700;
+        line-height: 42px;
+        margin: 0 0 30px;
+    }
+
+    &__category-name {
+        margin-left: 8px;
+        text-transform: uppercase;
+    }
+}

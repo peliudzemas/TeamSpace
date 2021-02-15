@@ -1,0 +1,15 @@
+@import '../../styles/base/base';
+
+.progress-block {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+
+    &__bar {
+        padding: 12px 0;
+    }
+
+    &__message {
+        font-size: $size-14;
+    }
+}

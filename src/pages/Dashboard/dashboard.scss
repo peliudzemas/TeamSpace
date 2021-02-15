@@ -1,0 +1,53 @@
+@import '../../styles/base/base';
+
+.dashboard {
+    margin: 0 auto;
+    max-width: 1265px;
+
+    &__header {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+
+    &__reservations-cards {
+        column-gap: $column-gap-small;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 30px;
+    }
+
+    &__heading {
+        color: $color-pickled-bluewood;
+        font-weight: 900;
+        line-height: 32px;
+        margin: 0 0 40px;
+    }
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .dashboard {
+        &__reservations-cards {
+            align-items: end;
+            column-gap: $column-gap-small;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet-landscape) {
+    .dashboard {
+        &__reservations-cards {
+            column-gap: $column-gap-extra-small;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .dashboard {
+        &__header {
+            flex-direction: column;
+        }
+    }
+}

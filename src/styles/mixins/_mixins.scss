@@ -1,0 +1,44 @@
+@mixin respond-to($size, $dir) {
+    @if ($size == retina) {
+        // stylelint-disable media-feature-name-no-vendor-prefix
+        @media only screen and (min-resolution: 2dppx),
+            (-webkit-min-device-pixel-ratio: 2) {
+            @content;
+        }
+    } @else if ($size and $dir) {
+        @media screen and (#{$dir}-width: ($size + px)) {
+            @content;
+        }
+    }
+}
+
+@mixin text-overflow-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-space-between {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-center-column {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin h3-heading {
+    color: $color-midnight;
+    font-weight: $weight-medium;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}

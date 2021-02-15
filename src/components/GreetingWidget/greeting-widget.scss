@@ -1,0 +1,11 @@
+@import '../../styles/base/base';
+
+.widget-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+
+    @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 20px;
+    }
+}

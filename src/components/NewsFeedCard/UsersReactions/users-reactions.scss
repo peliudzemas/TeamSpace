@@ -1,0 +1,39 @@
+@import '../../../styles/base/base';
+
+.user-reactions {
+    padding: 0 15px;
+
+    &__reaction,
+    &__comment {
+        display: inline-block;
+        margin: 5px 15px 5px 0;
+    }
+
+    &__reaction-icon,
+    &__comment-icon,
+    &__reaction-count,
+    &__comment-count {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__reaction-count,
+    &__comment-count {
+        color: $color-grey-8;
+        font-size: $size-13;
+        font-weight: $weight-medium;
+        margin: 0;
+        padding-left: 5px;
+    }
+
+    &__button {
+        background: $transparent;
+        border: hidden;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .disabled {
+        cursor: default;
+    }
+}

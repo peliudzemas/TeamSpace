@@ -1,0 +1,15 @@
+@import 'colors';
+@import 'typography';
+@import 'config';
+
+$z-index-base: 1;
+$z-index-higher: 2;
+$z-index-timeline: 100;
+$z-index-modal: 1000;
+
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-landscape: 1024px;
+$breakpoint-laptop: 1200px;
+
+$column-gap-small: 40px;
+$column-gap-extra-small: 20px;

@@ -1,0 +1,8 @@
+@import '../../../styles/base/base';
+
+.form-container {
+    &__form-grid {
+        display: grid;
+        grid-template-rows: auto;
+    }
+}

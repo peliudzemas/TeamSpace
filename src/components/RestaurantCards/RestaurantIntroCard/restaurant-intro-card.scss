@@ -1,0 +1,22 @@
+@import '../../../styles/mixins/mixins';
+@import '../../../styles/base/base';
+
+.restaurant-intro-card {
+    @include flex-center;
+    flex-direction: column;
+    padding: 53px 40px;
+
+    &__heading {
+        color: $color-black;
+        font-weight: 900;
+        line-height: 32px;
+        margin: 0 0 24px;
+        opacity: 0.7;
+        text-align: center;
+    }
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+        height: auto;
+        padding: 30px;
+    }
+}

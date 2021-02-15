@@ -1,0 +1,9 @@
+@import '../../styles/base/base';
+
+$color-divider: #d3dce6;
+
+.divider {
+    background-color: $color-divider;
+    height: 1px;
+    margin: 0 15px;
+}

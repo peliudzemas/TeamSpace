@@ -1,0 +1,14 @@
+@import '../../../../styles/base/typography';
+@import '../../../../styles/base/colors';
+
+.place {
+    color: $transperent-black-5;
+    display: flex;
+    font-size: $size-12;
+    letter-spacing: 0.5px;
+
+    &__divider {
+        border-right: 1px solid $transperent-black-5;
+        margin: 0 5px;
+    }
+}

@@ -1,0 +1,34 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/mixins';
+
+.pagination {
+    &__button {
+        @include flex-center;
+        background: $color-white;
+        border: 1px solid $color-grey-3;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: $main-font;
+        height: 32px;
+        margin-right: 16px;
+        width: 32px;
+
+        &--right {
+            transform: rotate(180deg);
+        }
+
+        &--numbered {
+            color: $color-fiord;
+            font-size: $size-14;
+            font-weight: $weight-black;
+        }
+
+        &--active {
+            background-color: $color-electric-violet;
+            border: 0;
+            color: $color-white;
+            font-size: $size-14;
+            font-weight: $weight-black;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '../../../../styles/base/base';
+
+.footer {
+    align-items: center;
+    display: flex;
+    height: 72px;
+    justify-content: flex-end;
+
+    &__copyright {
+        color: $color-fiord;
+        font-size: $size-10;
+        font-weight: $weight-medium;
+        padding-right: 40px;
+        text-transform: uppercase;
+    }
+}

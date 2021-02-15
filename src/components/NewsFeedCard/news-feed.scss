@@ -1,0 +1,8 @@
+@import '../../styles/base/base';
+
+.newsFeed {
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+    }
+}
