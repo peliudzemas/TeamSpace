@@ -1,40 +1,69 @@
 @import '../../../styles/base/base';
 
 .post {
-    &__image {
+    $this: &;
+    &__image,
+    &__video {
         height: 100%;
         object-fit: cover;
-        transition: transform 0.1s linear;
+
         width: 100%;
     }
 
-    &__image-wrapper {
+    &__image {
+        transition: transform 0.1s linear;
+    }
+
+    &__image-wrapper,
+    &__video-wrapper {
         height: 405px;
         overflow: hidden;
         position: relative;
+    }
 
-        &:hover .svg__play {
-            fill: $color-white;
-            stroke: $color-white;
-        }
-
-        &:hover .svg__background {
-            fill: $color-purple-dark;
-        }
-
+    &__image-wrapper {
         &:hover .post__image {
             overflow: hidden;
             transform: scale(1.1);
         }
     }
 
+    &__video-wrapper {
+        &:hover .svg__play {
+            fill: $color-white;
+            stroke: $color-white;
+        }
+
+        &:hover #{$this}__video-play-button {
+            background: $color-purple-heart;
+        }
+    }
+
+    &__video {
+        &:focus {
+            outline: none;
+        }
+    }
+
     &__video-play-button {
-        background: $transparent;
+        background: $color-white;
         border: hidden;
+        border-radius: 100px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        height: 60px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
+        width: 60px;
+
+        > svg {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-40%, -50%);
+        }
     }
 
     &__text-wrapper {

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, createRef } from "react";
 import firebase from "../../firebase.js";
 import BirthdayCard from "./Stories/Content/Birthday/BirthdayCard";
 import MasonryGrid from "../MasonryGrid/MasonryGrid";
@@ -21,7 +21,9 @@ const NewsFeed = () => {
   const [loading, setLoading] = useState(false);
   const [stories, setStories] = useState([]);
   const [user, setUser] = useState();
-  const commentRef = useRef(new Array(stories.length).fill(""));
+  const storiesLength = stories.length;
+  const commentRef = useRef([]);
+  const videoRefs = useRef([]);
   const [isCommentEmpty, setCommentEmptyState] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -227,6 +229,18 @@ const NewsFeed = () => {
     isCommentEmptyCheck(i);
   };
 
+  const onVideoPlay = (i) => {
+    videoRefs.current.forEach((videoRef) => {
+      if (
+        videoRef.current !== videoRefs.current[i].current &&
+        videoRef.current !== null
+      ) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    });
+  };
+
   // sort posts by date
   stories.sort(function (a, b) {
     let keyA = new Date(a.postDate),
@@ -259,12 +273,17 @@ const NewsFeed = () => {
   }, []);
 
   useEffect(() => {
-    if (commentRef.current.length !== stories.length) {
-      commentRef.current.push(
-        ...new Array(stories.length - commentRef.current.length).fill("")
-      );
+    if (commentRef.current.length !== storiesLength) {
+      commentRef.current = Array(storiesLength)
+        .fill()
+        .map((_, i) => commentRef.current[i] || "");
     }
-  }, [stories.length]);
+    if (videoRefs.current.length !== storiesLength) {
+      videoRefs.current = Array(storiesLength)
+        .fill()
+        .map((_, i) => videoRefs.current[i] || createRef());
+    }
+  }, [storiesLength]);
 
   if (loading) {
     return <ProgressIndicator message="loading..." />;
@@ -335,6 +354,8 @@ const NewsFeed = () => {
                   handleValueChange={onCommentChange(index)}
                   handleBlur={handleCommentBlur(index)}
                   isCommentEmpty={isCommentEmpty}
+                  onVideoPlaying={() => onVideoPlay(index)}
+                  videoRef={videoRefs.current[index]}
                 />
               );
             }

@@ -28,7 +28,13 @@ const ContentCard = (props) => {
 
   const typeOfContent = () => {
     if (props.data.type === "video") {
-      return <VideoContent postVideo={props.data.postVideo} />;
+      return (
+        <VideoContent
+          postVideo={props.data.postVideo}
+          videoRef={props.videoRef}
+          onVideoPlaying={props.onVideoPlaying}
+        />
+      );
     } else if (props.data.type === "photo") {
       return <PhotoContent postImage={props.data.postImage} />;
     } else if (props.data.type === "post") {
@@ -94,4 +100,6 @@ ContentCard.propTypes = {
   handleValueChange: PropTypes.func,
   isCommentEmpty: PropTypes.bool,
   handleBlur: PropTypes.func,
+  onVideoPlaying: PropTypes.func,
+  videoRef: PropTypes.any,
 };
