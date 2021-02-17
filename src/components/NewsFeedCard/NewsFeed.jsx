@@ -171,7 +171,7 @@ const NewsFeed = () => {
         updateStory("likes");
       }
     } else {
-      likedPosts.splice(storiesArr[i].id, 1);
+      likedPosts.splice(likedPosts.indexOf(storiesArr[i].id), 1);
       if (storiesArr[i].type === "birthday") {
         storiesArr[i].wishes -= 1;
         updateStory("wishes");
