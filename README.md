@@ -1,12 +1,16 @@
 # TeamSpace
 
 ## Instructions
-1. Launch project 
+
+1. install Dependencies
+```bash
+npm i
+```
+2. Launch project 
 ```bash
 npm start
 ```
-
-2. Launch server
+3. Launch server
 ```bash
 npm run start-server
 ```
