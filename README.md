@@ -32,4 +32,6 @@ npm run start-server
 8. Newsfeed connection to Firestore database
       1. Only this part is connected as to practice fetching and sending the data after the project was abandoned
       
-Newsfeed does not support videos. It's only a placeholder. When posting URL, it has to be image URL.
+Newsfeed "Add new story" for videos, currently, supports only direct URLs to video files, for example: https://cdn.videvo.net/videvo_files/video/free/2019-12/small_watermarked/190915_B_02_HaLong_06_preview.webm
+
+more videos to test with: https://www.videvo.net/free-stock-footage/sort/popular/?page=1
